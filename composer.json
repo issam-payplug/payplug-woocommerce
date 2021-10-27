@@ -22,16 +22,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Payplug\\PayplugWoocommerce\\": "src",
-            "libphonenumber\\": "vendor/giggsey/libphonenumberlight"
+            "Payplug\\PayplugWoocommerce\\": "src"
         }
-    },
-    "scripts": {
-      "post-install-cmd": [
-        "./bin/composer.sh"
-      ],
-      "post-update-cmd": [
-        "./bin/composer.sh"
-      ]
     }
 }
