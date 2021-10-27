@@ -17,12 +17,21 @@
     "require": {
         "php": ">=5.6.0",
         "composer/installers": "^1.9",
-        "payplug/payplug-php": "^3.3"
+        "payplug/payplug-php": "^3.3",
+        "giggsey/libphonenumber-for-php": "^8.12"
     },
     "autoload": {
         "psr-4": {
             "Payplug\\PayplugWoocommerce\\": "src",
-            "libphonenumber\\": "lib/libphonenumber"
+            "libphonenumber\\": "vendor/giggsey/libphonenumberlight"
         }
+    },
+    "scripts": {
+      "post-install-cmd": [
+        "./bin/composer.sh"
+      ],
+      "post-update-cmd": [
+        "./bin/composer.sh"
+      ]
     }
 }
