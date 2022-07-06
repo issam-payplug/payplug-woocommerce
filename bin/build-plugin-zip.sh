@@ -54,8 +54,7 @@ rm -f payplug-woocommerce.zip
 rm -f payplug-woocommerce.zip
 
 # Set the api-qa endpoint
-REPLACE_API_STRING="s,https://api.payplug.com,https://api-qa.payplug.com,g"
-find "vendor/payplug/payplug-php/lib/Payplug/Core/APIRoutes.php" -exec sed -i "$REPLACE_API_STRING" {} +
+find "vendor/payplug/payplug-php/lib/Payplug/Core/APIRoutes.php" -exec sed -i "s,https://api.payplug.com,https://api-qa.payplug.com,g" {} +
 
 pwd
 
