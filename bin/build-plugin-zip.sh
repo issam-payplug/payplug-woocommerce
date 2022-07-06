@@ -45,10 +45,7 @@ git clean -xdf
 
 # Run the build
 status "Installing dependencies..."
-npm install
 composer install --prefer-dist --no-dev -o
-status "Generating build..."
-npm run build:css
 
 # Remove any existing zip file
 rm -f payplug-woocommerce.zip
