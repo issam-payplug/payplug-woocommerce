@@ -14,7 +14,6 @@ jobs:
       - name: List files in the repository
         run: |
           ls ${{ github.workspace }}
-      - run: chmod 777 ./bin/build-plugin-zip.sh
       - name: Start the zip generation
         run: ./bin/build-plugin-zip.sh
       - run: echo "🍏 This job's status is ${{ job.status }}."
