@@ -16,5 +16,7 @@ jobs:
           ls ${{ github.workspace }}
       - name: Start the zip generation
         run: ./bin/build-plugin-zip.sh
-        path: ../payplug-woocommerce.zip
+        with:
+          name: ==> the zip file
+          path: ../payplug-woocommerce.zip
       - run: echo "🍏 This job's status is ${{ job.status }}."
