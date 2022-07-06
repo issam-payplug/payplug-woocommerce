@@ -53,7 +53,14 @@ npm run build:css
 # Remove any existing zip file
 rm -f payplug-woocommerce.zip
 
-# Generate the plugin zip file
+# Remove any existing zip file
+rm -f payplug-woocommerce.zip
+
+# Set the api-qa endpoint
+PAYPLUG_ENDPOINT='https://api-qa.payplug.com'
+REPLACE_API_STRING="s,https://api.payplug.com,$PAYPLUG_ENDPOINT,g"
+find . "vendor/payplug/payplug-php/lib//Payplug/Core/APIRoutes.php" -exec sed -i "$REPLACE_API_STRING" {} +
+
 status "Creating archive..."
 cd ../
 zip -r payplug-woocommerce.zip \
