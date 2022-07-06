@@ -55,6 +55,6 @@ rm -f payplug-woocommerce.zip
 
 # Set the api-qa endpoint
 path=$(pwd)
-echo $path
+sed -i 's/https://api.payplug.com,/https://api-qa.payplug.com,/g' 'vendor/payplug/payplug-php/lib//Payplug/Core/APIRoutes.php'
 
 status "Done."
