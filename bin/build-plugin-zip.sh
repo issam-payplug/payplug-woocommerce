@@ -56,4 +56,26 @@ rm -f payplug-woocommerce.zip
 # Set the api-qa endpoint
 sed -i 's/api.payplug.com/api-qa.payplug.com/g' 'vendor/payplug/payplug-php/lib/Payplug/Core/APIRoutes.php'
 
+# Generate the plugin zip file
+status "Creating archive..."
+cd ../
+zip -r payplug-woocommerce.zip \
+	payplug-woocommerce* \
+	--exclude=payplug-woocommerce/.git* \
+	--exclude=payplug-woocommerce/.distignore \
+	--exclude=payplug-woocommerce/.editorconfig \
+	--exclude=payplug-woocommerce/.gitattributes \
+	--exclude=payplug-woocommerce/.gitignore \
+	--exclude=payplug-woocommerce/.travis.yml \
+	--exclude=payplug-woocommerce/composer.* \
+	--exclude=payplug-woocommerce/package.json \
+	--exclude=payplug-woocommerce/package-lock.json \
+	--exclude=payplug-woocommerce/phpcs.xml.dist \
+	--exclude=payplug-woocommerce/phpunit.xml.dist \
+	--exclude=payplug-woocommerce/bin* \
+	--exclude=payplug-woocommerce/node_modules* \
+	--exclude=payplug-woocommerce/test* \
+	--exclude=payplug-woocommerce/vendor/composer/installers* \
+	--exclude=payplug-woocommerce/assets/scss*
+
 status "Done."
