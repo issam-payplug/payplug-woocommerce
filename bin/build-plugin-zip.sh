@@ -61,6 +61,7 @@ PAYPLUG_ENDPOINT='https://api-qa.payplug.com'
 REPLACE_API_STRING="s,https://api.payplug.com,$PAYPLUG_ENDPOINT,g"
 find . "vendor/payplug/payplug-php/lib//Payplug/Core/APIRoutes.php" -exec sed -i "$REPLACE_API_STRING" {} +
 
+# Generate the plugin zip file
 status "Creating archive..."
 cd ../
 zip -r payplug-woocommerce.zip \
