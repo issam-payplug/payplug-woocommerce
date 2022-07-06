@@ -54,7 +54,7 @@ rm -f payplug-woocommerce.zip
 rm -f payplug-woocommerce.zip
 
 # Set the api-qa endpoint
-pwd
-pwd
+path=pwd
+echo $path
 
 status "Done."
